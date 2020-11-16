@@ -1,0 +1,14 @@
+{
+  "name": "circle-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/**/*.js",
+    "fmt": "prettier --write ."
+  },
+  "devDependencies": {
+    "tape": "^5.0.1",
+    "prettier": "^2.1.2"
+  }
+}
