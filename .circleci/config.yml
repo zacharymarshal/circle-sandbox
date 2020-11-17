@@ -18,7 +18,11 @@ workflows:
   app-tests:
     jobs:
       - lint
+      - hold:
+          type: approval
+          requires:
+            - lint
       - node/test:
           version: 14.15.0
           requires:
-            - lint
+            - hold
