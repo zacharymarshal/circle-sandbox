@@ -5,9 +5,14 @@ version: 2.1
 
 jobs:
   lint:
-    executor: node/default
+    executor:
+      name: node/default
+      tag: "14.15.0"
     steps:
-      - run: npm run lint
+      - checkout
+      - node/install-pacakges
+      - run:
+          command: npm run lint
 
 workflows:
   app-tests:
