@@ -10,7 +10,7 @@ jobs:
       tag: "14.15.0"
     steps:
       - checkout
-      - node/install-pacakges
+      - node/install-packages
       - run:
           command: npm run lint
 
