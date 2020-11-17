@@ -3,7 +3,17 @@ orbs:
 
 version: 2.1
 
+jobs:
+  lint:
+    executor: node/default
+    steps:
+      - run: npm run lint
+
 workflows:
   app-tests:
     jobs:
-      - node/test
+      - lint
+      - node/test:
+          version: 14.15.0
+          requires:
+            - lint
