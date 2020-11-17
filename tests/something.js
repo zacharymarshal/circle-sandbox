@@ -9,3 +9,8 @@ test("testing something else", function (t) {
   t.plan(1);
   t.equal(typeof "hello", "string");
 });
+
+test("testing another thing", function (t) {
+  t.plan(1);
+  t.equal(typeof 12, "number");
+});
